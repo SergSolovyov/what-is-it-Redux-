@@ -25,3 +25,12 @@ Redux - library for work with state application (data store)
 4. `Combine` our two `reducers` => inside store/index.js create rootReducer=combineReducers({'is here our reducers'}) `and then pass rootReducer to store`
 5. npm i @redux-devtools/extension to keep track of the state in the browser and `redux devtools extension for the browser` and then add function composeWithDevTools() to createStore() inside store/index.js
 
+# PART 3
+## work with array
+1. inside </App> `get customers` with hook useSelector and `create control add and delete `customer inside App
+2. Change customerReducer
+3. create func addCustomer(name) inside App
+4. creat func removeCustomer()
+5. add logic remove customer inside customerReducer
+6. Refactoring: create constant action.type and create func action creator
+7. replace dispath with our new's functions actionCreators
