@@ -34,3 +34,13 @@ Redux - library for work with state application (data store)
 5. add logic remove customer inside customerReducer
 6. Refactoring: create constant action.type and create func action creator
 7. replace dispath with our new's functions actionCreators
+
+# PART 4
+## asynchronous
+
+1. npm i redux-thunk
+2. add applyMiddleware(thunk) to composeWithDevTools inside store/index.js
+3. create new action `ADD_MANY_CUSTOMERS` inside customerReducer
+4. create folder `asyncActions/customers.js`
+5. creat func fetchCustomers which return another func which should return dispatch with func `action-creators`
+6. add button in App with `onClick{() => dispatch(fetchCustomers())}`
