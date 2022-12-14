@@ -44,3 +44,20 @@ Redux - library for work with state application (data store)
 4. create folder `asyncActions/customers.js`
 5. creat func fetchCustomers which return another func which should return dispatch with func `action-creators`
 6. add button in App with `onClick{() => dispatch(fetchCustomers())}`
+
+# PART 5
+## redux saga
+
+1. Redux saga contains three basic concepts: `Workers, Watchers, Effects`
+2. Create new two reducers, actionCreators and combine to rootReducer
+3. Create new folder saga, create './saga' => 'index.js', 'countSaga.js', 'userSaga.js'
+4. Inside countSaga.js create `incrementWorker` and 'decrementWorker' and create 'countWatcher';
+5. npm i redux-saga
+6. import put from 'redux-saga/effects'. `put` that is like `dispatch`
+7. import takeEvery that is `watcher`
+8. inside watcher called 'countWatcher' yield `takeEvery(type, worker)`
+9. add sagaMiddleware inside applyMiddleware in our store
+10. sagaMiddleware.run(watcher)
+11. create worker, watcher for fetchUsers as in the example before
+12. inside 'saga/index.js' create global watcher for combine countWatcher and userWatcher
+13. inside 'store/index.js' assign rootWatcher to sagaMiddleware
